@@ -1,0 +1,6 @@
+line_id, max_pressure, min_temperature, max_temperature, nominal_diameter, minimum_thickness, fluid
+1, 20, 0, 250, 14, 8, P
+2, 10, -10, 200, 10, 8, PC
+3, 15, -29, 150, 12, 8, F
+4, 2, 0, 50, 4, 8, FG
+5, 4, 0, 50, 2, 8, CN

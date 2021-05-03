@@ -1,0 +1,7 @@
+*font: Arial 10
+*Label*font: Times 12 bold
+*background: AntiqueWhite1
+*Text*background: #454545
+*Button*foreground:gray55
+*Button*relief: raised
+*Button*width: 3
