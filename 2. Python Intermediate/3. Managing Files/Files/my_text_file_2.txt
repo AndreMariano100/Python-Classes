@@ -1,0 +1,7 @@
+Flange Data
+Flange Pressure: 150 
+Flange Diameter: 10 
+Flange Schedule: STD 
+flange face: raised face
+flange type: welding neck
+gasket type: spiral wound

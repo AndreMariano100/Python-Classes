@@ -1,5 +1,5 @@
 '''
-import os
+The OS module in Python provides functions for interacting with the operating system.
 
 Methods         Syntax / Description
 chdir()         os.chdir(path) This method changes the current working directory to path.
@@ -35,7 +35,7 @@ listdir()       os.listdir(path=‘.’) This method returns a list containing t
 
 import os.path
 
-Methods Syntax Description
+Methods             Syntax Description
 join()              os.path.join(path, *paths) This method is used to join one or more path components
                     intelligently. The return value is the concatenation of path and any
                     members of *paths with exactly one directory.
@@ -47,8 +47,7 @@ getmtime()          os.path.getmtime(path) This method returns the time of last 
 abspath()           os.path.abspath(path) This method returns a normalized absolutized version of the
                     pathname path.
 path.isabs()        os.path.isabs(path) This method returns True if path is an absolute pathname.
-relpath()           os.path.relpath(path,
-                    start=os.curdir)
+relpath()           os.path.relpath(path, start=os.curdir)
                     This method returns a relative filepath to path either from the current
                     directory or from an optional start directory.
 dirname()           os.path.dirname(path) This method returns the directory name of the pathname path.
@@ -64,3 +63,13 @@ splitext()          os.path.splitext(path) This method splits the pathname path 
                     most one period and root is everything leading up to that.
 getsize()           os.path.getsize(path) This method returns the size, in bytes, of path.
 '''
+import os
+
+# Current working directory
+print(os.getcwd())
+
+# Change directory
+os.chdir('C:\TEMP')
+print(os.getcwd())
+print(os.listdir(os.getcwd()))
+print(os.name)

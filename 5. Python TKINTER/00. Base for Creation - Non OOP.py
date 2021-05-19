@@ -16,13 +16,17 @@ if True:
     APP_WIDTH = 600
     APP_HEIGHT = 400
 
+# Global Variables ------------------------------------------------------------------------------------
+global very_important_variable
+
 
 # App Methods -----------------------------------------------------------------------------------------
 def configure_root(root):
-    root.iconbitmap('IMAGES\python.ico')
-    root.title('My Title goes here')
+    root.iconbitmap('IMAGES\engineering.ico')
+    root.title('Tkinter as Non OOP')
     root.minsize(APP_WIDTH, APP_HEIGHT)
-    root.configure(bg=BG_COLOR)
+    root.configure(bg='gray5')
+    root.columnconfigure(0, weight=1)
 
 
 def adjust_root_position(root):
@@ -44,8 +48,10 @@ def method_b():
 
 def create_widgets(root):
     global very_important_variable
+
     for i in range(5):
-        tk.Label(root, text=f'Label {i}').pack(expand='True')
+        label = tk.Label(root, text=f'Label {i}', bg='gray30')
+        label.grid(row=i, column=0, pady=10, padx=10, sticky='nsew')
         root.rowconfigure(i, weight=1)
 
     very_important_variable = 10
@@ -56,10 +62,11 @@ def create_widgets(root):
 
 
 # App Main Program -----------------------------------------------------------------------------------
-master = tk.Tk()
-configure_root(master)
-adjust_root_position(master)
-create_widgets(master)
+if True:
+    master = tk.Tk()
+    configure_root(master)
+    adjust_root_position(master)
+    create_widgets(master)
 
 if __name__ == '__main__':
     master.mainloop()

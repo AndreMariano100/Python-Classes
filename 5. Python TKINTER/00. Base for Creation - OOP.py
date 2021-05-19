@@ -24,10 +24,11 @@ class MyApp(tk.Tk):
         super().__init__()
 
         # Configure root
-        self.iconbitmap('IMAGES/python.ico')
-        self.title('My Title goes here')
+        self.iconbitmap('IMAGES/engineering.ico')
+        self.title('Tkinter as OOP')
         self.minsize(APP_WIDTH, APP_HEIGHT)
-        self.configure(bg=BG_COLOR)
+        self.configure(bg='gray5')
+        self.columnconfigure(0, weight=1)
 
         # Adjust root position
         screen_width, screen_height = self.winfo_screenwidth(), self.winfo_screenheight()
@@ -37,11 +38,11 @@ class MyApp(tk.Tk):
 
         # Create widgets
         for i in range(5):
-            tk.Label(self, text=f'Label {i}').pack(expand='True')
+            label = tk.Label(self, text=f'Label {i}', bg='gray30')
+            label.grid(row=i, column=0, pady=10, padx=10, sticky='nsew')
             self.rowconfigure(i, weight=1)
 
         self.very_important_variable = 10
-
         self.method_a()
         self.method_b()
 

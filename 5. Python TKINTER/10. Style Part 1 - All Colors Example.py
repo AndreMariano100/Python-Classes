@@ -4,7 +4,8 @@ import tkinter as tk
 def action(event):
     color = event.widget['text']
     print('Text:', color)
-    frame_2.tk_setPalette(background=color)
+    root.tk_setPalette(background=color)
+
     """Set a new color scheme for all widget elements.
     A single color as argument will cause that all colors of Tk
     widget elements are derived from this.
@@ -15,7 +16,7 @@ def action(event):
     background, highlightColor, selectForeground,
     disabledForeground, insertBackground, troughColor."""
 
-
+# Colors _______________________________________________________________________________________________________________
 COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace', 'linen', 'antique white',
           'papaya whip', 'blanched almond', 'bisque', 'peach puff', 'navajo white', 'lemon chiffon', 'mint cream',
           'azure', 'alice blue', 'lavender', 'lavender blush', 'misty rose', 'dark slate gray', 'dim gray',
@@ -89,13 +90,15 @@ COLORS = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'ol
           'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray90', 'gray91', 'gray92',
           'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
 
+# Root__________________________________________________________________________________________________________________
 root = tk.Tk()
 root.title("Named colour chart")
+root.columnconfigure(0, weight=1)
 
+# Frame 1 ______________________________________________________________________________________________________________
 frame_1 = tk.Frame(root)
 frame_1.grid(row=0, column=0)
-frame_2 = tk.Frame(root)
-frame_2.grid(row=1, column=0)
+
 MAX_ROWS = 30
 FONT_SIZE = 10
 
@@ -104,8 +107,15 @@ for i, color in enumerate(COLORS):
     e.grid(row=i % MAX_ROWS, column=i//MAX_ROWS, sticky='ew')
     e.bind("<ButtonPress>", action)
 
-label = tk.Label(frame_2, text='Color Pallete Selected', height=3)
-label.grid(row=0, column=0, sticky='nsew')
+# Frame 2 ______________________________________________________________________________________________________________
+frame_2 = tk.Frame(root)
+frame_2.grid(row=1, column=0)
+label = tk.Label(frame_2, text='Label Example')
+label.grid(row=0, column=0, sticky='nsew', pady=10)
+button = tk.Button(frame_2, text='Button Example')
+button.grid(row=0, column=1, sticky='nsew', pady=10)
+entry = tk.Entry(frame_2, text='Entry Example')
+entry.grid(row=0, column=2, sticky='nsew', pady=10)
 
 if __name__ == '__main__':
     root.mainloop()
