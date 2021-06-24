@@ -26,33 +26,27 @@ from tkinter import simpledialog
 # App Functions
 def popup(selection):
 
+    answer = ''
     if selection == 'info':
         answer = messagebox.showinfo(title='Necessary title', message='Your message comes here. Nothing too long.')
-        print(answer)
 
     elif selection == 'warning':
         answer = messagebox.showwarning(title='Warning alert!', message='You have made a huge mistake!')
-        print(answer)
 
     elif selection == 'error':
         answer = messagebox.showerror(title='Error Message', message='You made another mistake')
-        print(answer)
 
     elif selection == 'question':
         answer = messagebox.askquestion(title='Question!', message='Do you know the answer?')
-        print('Answer:', answer)
 
     elif selection == 'ok/cancel':
         answer = messagebox.askokcancel(title='OK or Cancel!', message='Do you want to leave?')
-        print('Answer:', answer)
 
     elif selection == 'yes/no':
         answer = messagebox.askyesno(title='Yes or Yes', message='Do you want to leave?')
-        print('Answer:', answer)
 
     elif selection == 'color':
-        color = colorchooser.askcolor()
-        print('Color:', color)
+        answer = colorchooser.askcolor()
 
     elif selection == 'simple':
         name = simpledialog.askstring('Input', 'What is your first name?', parent=root)
@@ -62,6 +56,7 @@ def popup(selection):
         print('Age:', age)
         print('Weight:', weight)
 
+    print(answer)
 
 #########################################################################################################
 # App GUIs
