@@ -64,7 +64,6 @@ else:
         matrix.append(line)
 
     while True:
-        clear = lambda: os.system('cls')
         for lines in matrix:
             print(lines)
 

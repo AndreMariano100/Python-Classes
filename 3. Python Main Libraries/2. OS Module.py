@@ -66,10 +66,31 @@ getsize()           os.path.getsize(path) This method returns the size, in bytes
 import os
 
 # Current working directory
-print(os.getcwd())
+print('\nShow Path')
+old_dir = os.getcwd()
+print(old_dir)
 
 # Change directory
 os.chdir('C:\TEMP')
 print(os.getcwd())
-print(os.listdir(os.getcwd()))
-print(os.name)
+
+# Show folders and files
+print('\nShow folders and files')
+print(os.listdir(old_dir))
+
+# Split
+print('\nSplit')
+print(os.path.split(old_dir))
+file_name = os.path.join(old_dir, 'some_file.txt')
+print(os.path.split(file_name))
+print(os.path.exists(file_name))
+
+# Base name
+print('\nBase name')
+print(os.path.basename(old_dir))
+print(os.path.basename(file_name))
+
+# Split text
+print('\nSplit text')
+print(os.path.splitext(old_dir))
+print(os.path.splitext(file_name))

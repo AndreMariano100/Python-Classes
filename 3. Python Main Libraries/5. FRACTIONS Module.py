@@ -1,5 +1,5 @@
 """
-Class Fraction(numerator=0, denominator=1
+Class Fraction(numerator=0, denominator=1)
 """
 from fractions import Fraction
 

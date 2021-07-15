@@ -50,6 +50,9 @@ my_list_4[1] = 20
 my_list_4[2] = 30
 print(f'My list 4:{my_list_4}')
 print()
+my_list_5 = 3*[0]
+for i in range(3):
+    my_list_5[i] = 10 * i
 
 ########################################################################
 # Python Built in Methods
@@ -120,11 +123,11 @@ print()
 
 # Pop Method
 print('Poping...')
-my_list_2 = my_list.copy()
+my_list_3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for i in range(3):
-    print(my_list_2)
-    my_list_2.pop(i)
-print(my_list_2)
+    print(my_list_3)
+    my_list_3.pop(i)
+print(my_list_3)
 print()
 
 # Sub lists

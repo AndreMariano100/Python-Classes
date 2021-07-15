@@ -12,7 +12,7 @@ if True:
 # Create Line -----------------------------------------------------------------------------------
 if True:
     pass
-    # # create_line(x0, y0, x1, y1, ..., xn, yn, options...) ⇒ id
+    # create_line(x0, y0, x1, y1, ..., xn, yn, options...) ⇒ id
     # y_start = 10, y_dimension - 10
     # y_finish = 10, 10
     # x_start = y_start
@@ -22,8 +22,8 @@ if True:
     #
     # y_axe = c.create_line(*y_start, *y_finish, arrow='last')
     # x_axe = c.create_line(*x_start, *x_finish, arrow='last')
-    # graph = c.create_line(*graph_line_start, *graph_line_end, width=7, fill='red', capstyle='butt')
-    #
+    # graph = c.create_line(*graph_line_start, *graph_line_end, width=7, fill='red', capstyle='round')
+
     # width=2, fill='red'
     # arrow='last' # 'first', 'last', 'both'
     # arrowshape=(10, 10, 5)
@@ -35,17 +35,16 @@ if True:
     # p_3 = 100, y_dimension - 30
     # p_4 = 200, y_dimension - 250
     # p_5 = graph_line_end
-    # graph_2 = c.create_line(*p_1, *p_2, *p_3, *p_4, *p_5, fill='blue', width=5)
+    # graph_2 = c.create_line(*p_1, *p_2, *p_3, *p_4, *p_5, fill='blue', width=5, smooth=1)
 
     # smooth=1
     # splinesteps=12
 
 # Create Oval -----------------------------------------------------------------------------------
 if True:
-    pass
     # create_oval(x0, y0, options...) ⇒ id
-    # oval_box = (10, y_dimension/3, x_dimension-10, 2*y_dimension/3)
-    # c.create_oval(oval_box, fill='black', outline='red', width=2)
+    oval_box = (10, y_dimension/3, x_dimension-10, 2*y_dimension/3)
+    c.create_oval(oval_box, fill='black', outline='red', width=2)
 
 # Create Arc ------------------------------------------------------------------------------------
 if True:

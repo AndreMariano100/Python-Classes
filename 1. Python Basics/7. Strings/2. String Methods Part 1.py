@@ -35,7 +35,7 @@ print(string_5)
 # in, not in
 result = string_1 in string_3
 print(result)
-result = string_1 in string_5
+result = string_1 not in string_5
 print(result)
 
 # String comparison
@@ -65,7 +65,7 @@ print(string_3[4:])
 # Joining
 name = 'Robert'
 surname = 'Downey'
-full_name = '*'.join([name, surname])
+full_name = ' / '.join([name, surname])
 print(full_name)
 
 # Spliting

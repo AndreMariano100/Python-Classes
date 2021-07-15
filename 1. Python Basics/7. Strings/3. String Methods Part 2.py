@@ -48,11 +48,12 @@ zfill()	        Fills the string with a specified number of 0 values at the begi
 
 '''
 # String Methods
-my_string = 'this is my string'
+my_string = 'This Is My String'
 print(my_string)
 print('Capitalize:', my_string.capitalize())
 print('Count "i":', my_string.count('i'))
-print('Find "my":', my_string.find('my'))
+print('Find "my":', my_string.find('string'))
+print('Find "my":', my_string.rfind('string'))
 print('Lower:', my_string.lower())
 print('islower:', my_string.islower())
 print('Upper:', my_string.upper())
@@ -61,3 +62,8 @@ print('isalpha:', my_string.isalpha())
 my_string_2 = my_string.replace(' ', '')
 print(my_string_2)
 print('isalpha:', my_string_2.isalpha())
+print('last')
+print('my_string'.isidentifier())
+my_string_3 = 'A\t1234\tC'
+my_string_4 = my_string_3.expandtabs(5)
+print(my_string_4)

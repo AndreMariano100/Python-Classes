@@ -170,12 +170,12 @@ released = {
 ############################################################################################
 # Dict and ZIP
 
-keys = ['name_1', 'name_2', 'name_3', 'name_4']
-values = ['value_1', 'value_2', 'value_3', 'value_4']
-
-# zip and create list, tuple, set or dict
-my_set = dict(zip(keys, values))
-print(my_set)
-
-
-
+# keys = ['name_1', 'name_2', 'name_3', 'name_4']
+# values = ['value_1', 'value_2', 'value_3', 'value_4']
+#
+# # zip and create list, tuple, set or dict
+# my_set = dict(zip(keys, values))
+# print(my_set)
+#
+#
+#
