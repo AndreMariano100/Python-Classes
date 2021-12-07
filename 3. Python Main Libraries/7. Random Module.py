@@ -28,29 +28,29 @@ paretovariate() 	Returns a random float number based on the Pareto distribution 
 weibullvariate() 	Returns a random float number based on the Weibull distribution (used in statistics)
 """
 
-# 1. Generate random within range - randrange(self, start, stop=None, step=1) -  excludes the end point
-for i in range(30):
-    print(randrange(10), end='/')
-
-# 2. Generate random within range - randrange() includes both end point
-print()
-for i in range(30):
-    print(randint(0, 10), end='/')
-
-# 3. Generate random between 0 and 1 - random()
-print()
-for i in range(30):
-    print(round(random(), 2), end='/')
-
-# 4. Generate random between two given values - uniform()
-print()
-for i in range(30):
-    print(round(uniform(5, 6), 2), end='/')
-
-# 5. Generate random respecting a statistical distribution
-print()
-for i in range(30):
-    print(round(gauss(0, 1), 2), end='/')
+# # 1. Generate random within range - randrange(self, start, stop=None, step=1) -  excludes the end point
+# for i in range(30):
+#     print(randrange(10), end='/')
+#
+# # 2. Generate random within range - randrange() includes both end point
+# print()
+# for i in range(30):
+#     print(randint(0, 10), end='/')
+#
+# # 3. Generate random between 0 and 1 - random()
+# print()
+# for i in range(30):
+#     print(round(random(), 2), end='/')
+#
+# # 4. Generate random between two given values - uniform()
+# print()
+# for i in range(30):
+#     print(round(uniform(5, 6), 2), end='/')
+#
+# # # 5. Generate random respecting a statistical distribution
+# print()
+# for i in range(30):
+#     print(round(gauss(0, 1), 2), end='/')
 
 local_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
 # 6. Choose an element from a set

@@ -1,6 +1,6 @@
 # IS / IS NOT
 list_1 = [0, 1, 2, 3]
-list_2 = list_1
+list_2 = [0, 1, 2, 3]
 
 if list_2 is list_1:
     print('They are the same list')

@@ -57,7 +57,7 @@ len() 	        The len() function is used to get the length of an object.
 list() 	        The list() function is used to create a list object (list is actually a mutable sequence type).
 locals() 	    The locals() function is used to get the local symbol table as a dictionary. Free variables
                 are returned by locals() when it is called in function blocks, but not in class blocks.
-map() 	        The map() function is used to execute a specified function for each item in a inerrable.
+map() 	        The map() function is used to execute a specified function for each item in a iterable.
 max() 	        The max() function is used to find the item with the largest value in an iterable.
 memoryview() 	The memoryview() function is used to get a memory view object from a specified object.
 min() 	        The min() function is used to find the item with the smallest value in an iterable.

@@ -51,7 +51,6 @@ def function_4():
 def function_5(a, b, c):
     # a, b, and c are local variables names.
     # they exist only within the function.
-
     print('Function 5')
     print('Receives parameters')
     print('Parameters:', a, b, c)
@@ -60,13 +59,13 @@ def function_5(a, b, c):
 
 
 def main():
-    function_1()
-    x, y, z = 1, 2, 3
-    function_2(x, y, z)
-    result = function_3()
-    print('Result:', result)
-    result_1, result_2, result_3 = function_4()
-    print(result_1, result_2, result_3)
+    # function_1()
+    # x, y, z = 1, 2, 3
+    # function_2(x, y, z)
+    # result = function_3()
+    # print('Result:', result)
+    # result_1, result_2, result_3 = function_4()
+    # print(result_1, result_2, result_3)
     x = 4
     y = 10
     z = 100

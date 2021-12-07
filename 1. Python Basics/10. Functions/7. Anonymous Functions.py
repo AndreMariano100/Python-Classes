@@ -4,10 +4,12 @@ Create a function that will be used just once, and don't bother giving it a name
 lambda arguments: expression
 """
 
-double = lambda i: i*2
+double = lambda i: i * 2
 
 print(double(10))
 print(double(100))
+my_var = double(4)
+print(my_var)
 
 func0 = lambda: print('no args')
 func1 = lambda x: x * x

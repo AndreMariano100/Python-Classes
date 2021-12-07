@@ -36,6 +36,12 @@ Valid action methods
 import tkinter as tk
 
 root = tk.Tk()  # root is only the name of the widget
+"""
+print(root.keys())
+['bd', 'borderwidth', 'class', 'menu', 'relief', 'screen', 'use', 'background', 'bg', 'colormap', 'container', 
+ 'cursor', 'height', 'highlightbackground', 'highlightcolor', 'highlightthickness', 'padx', 'pady', 'takefocus', 
+ 'visual', 'width']
+"""
 
 # Sets the top level main properties
 root.iconbitmap('IMAGES\python.ico')
