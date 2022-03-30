@@ -12,6 +12,7 @@ employee_1 = Employee('Paul', 'Newman')
 employee_2 = Employee('Rod', 'Stewart')
 print(employee_1)
 print(employee_2)
+print(employee_1.__dict__)
 
 # Attributes may be created for each instance
 employee_1.salary = 100

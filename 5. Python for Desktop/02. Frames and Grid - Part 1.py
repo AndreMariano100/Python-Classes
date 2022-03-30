@@ -18,7 +18,7 @@ import tkinter as tk
 
 # Create the Main Window
 root = tk.Tk()
-root.iconbitmap('Images\Python.ico')
+root.iconbitmap(r'IMAGES\python.ico')
 root.title('TKINTER Frames')
 # root.minsize(500, 200)
 
@@ -74,7 +74,7 @@ Configuring Columns and Rows
     w.rowconfigure(row_number, weight=1, minsize=50, pad=5)
 
 The PACK option:
-    w.pack(side='left', anchow='nw', fill='y', expand='yes')
+    w.pack(side='left', anchor='nw', fill='y', expand='yes')
 
     side    -> left, right, up, down
     fill    -> x, y, both

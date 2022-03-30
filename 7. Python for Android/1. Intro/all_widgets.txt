@@ -1,0 +1,22 @@
+Kivy widgets can be categorized as follows:
+
+• UX widgets: Classical user interface widgets, ready to be assembled to create more complex widgets.
+    Label, Button, CheckBox, Image, Slider, Progress Bar, Text Input, Toggle button, Switch, Video
+
+• Layouts: A layout widget does no rendering but just acts as a trigger that arranges its children in
+    a specific way. Read more on Layouts here.
+    Anchor Layout, Box Layout, Float Layout, Grid Layout, PageLayout, Relative Layout, Scatter
+    Layout, Stack Layout
+
+• Complex UX widgets: Non-atomic widgets that are the result of combining multiple classic widgets.
+    We call them complex because their assembly and usage are not as generic as the classical
+    widgets.
+    Bubble, Drop-Down List, FileChooser, Popup, Spinner, RecycleView, TabbedPanel, Video
+    player, VKeyboard,
+
+• Behaviors widgets: These widgets do no rendering but act on the graphics instructions or interaction
+    (touch) behavior of their children.
+    Scatter, Stencil View
+
+• Screen manager: Manages screens and transitions when switching from one to another.
+    Screen Manager

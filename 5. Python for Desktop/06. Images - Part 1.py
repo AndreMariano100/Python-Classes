@@ -29,8 +29,7 @@ def resize(event):
     label_2.configure(image=my_image)
 
 
-######################################################################################################
-# Constructs the Main Window
+# Constructs the Main Window -------------------------------------------------------------------------------------------
 root = tk.Tk()
 image_size = (800, 400)
 label_height = 50

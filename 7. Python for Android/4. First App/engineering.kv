@@ -1,0 +1,25 @@
+BoxLayout:
+    orientation: 'horizontal'
+    size: (1000, 600)
+    size_hint: (None, None)
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: (200, 600)
+        size_hint: (None, None)
+        canvas.before:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size: (800, 600)
+        size_hint: (None, None)
+        canvas.before:
+            Color:
+                rgba: 0.8, 0.8, 0.8, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size

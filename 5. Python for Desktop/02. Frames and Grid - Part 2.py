@@ -17,7 +17,7 @@ for bdw in range(5):
     frame = tk.Frame(frame_1, borderwidth=bdw)
     frame.grid(row=bdw, column=0, pady=10, padx=5)
     label = tk.Label(frame, text='borderwidth = %d ' % bdw)
-    label.grid(row=0, column=0)
+    label.grid(row=0, column=0, padx=2)
 
     relief_set = ['raised', 'sunken', 'flat', 'ridge', 'groove', 'solid']
 

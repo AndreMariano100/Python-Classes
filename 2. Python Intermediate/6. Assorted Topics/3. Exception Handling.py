@@ -9,6 +9,8 @@ try:
 except:
     <code>
     <code>
+else:
+    <code>
 finally:
     <code>
 

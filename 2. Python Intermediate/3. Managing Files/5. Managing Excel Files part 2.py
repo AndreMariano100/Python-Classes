@@ -8,7 +8,7 @@ full_path = os.path.join(current_path, 'Files', 'pipe_schedules.xlsx')
 
 # Create DataFrame Object ----------------------------------------------------------------------------------------------
 df = pd.read_excel(full_path, sheet_name='pipe_schedules')
-
+print(df)
 print(df.columns)
 
 # Filter mask

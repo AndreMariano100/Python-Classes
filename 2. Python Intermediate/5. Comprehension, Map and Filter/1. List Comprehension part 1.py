@@ -38,7 +38,7 @@ print(my_sq_LC)
 # Although LC may be similar to map, it returns the list directly and map requires
 # the additional list command.
 
-# Python also has the funcionability to create set and dictionary in a similar
+# Python also has the functionality to create set and dictionary in a similar
 # manner as List Comprehension
 
 # Set Comprehension is quite the same as List Comprehension,
@@ -46,7 +46,7 @@ print(my_sq_LC)
 my_sq_SC = {base * base for base in range(10)}
 print(my_sq_SC)
 
-# Dictionary Comprehension is similar, but ypu need to define a key
+# Dictionary Comprehension is similar, but you need to define a key
 my_sq_DC = {i: i*i for i in range(10)}
 print(my_sq_DC)
 

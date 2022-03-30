@@ -103,3 +103,5 @@ if __name__ == '__main__':
     v1 = Vector2D(0, 1)
     v2 = Vector2D(1, 0)
     print(v1.angle(v2))
+    print(repr(v1))
+    print(v1)

@@ -1,47 +1,46 @@
-
 # MAP
 
-# numbers = [10, 15, 21, 33, 42, 55]
-# numbers2 = []
-# for i in numbers:
-#     x = i*2
-#     numbers2.append(x)
-# print(f'numbers2', numbers2)
+numbers = [10, 15, 21, 33, 42, 55]
+numbers2 = []
+for i in numbers:
+    x = i*2
+    numbers2.append(x)
+print(f'numbers2', numbers2)
+
+
+# MAP permite processar e transformar todos os itens em um interaçao sem usar um loop explicito.
+# É util quando quiser aplicar a cada item de uma interação uma funçao.
+
+numbers = [10, 15, 21, 33, 42, 55]
+mapped_numbers = map(lambda x: x*2, numbers)
+print(f'mapped_numbers', mapped_numbers)
+
+numbers = [10, 15, 21, 33, 42, 55]
+mapped_numbers = list(map(lambda x: x*2, numbers))
+print(f'mapped_numbers', mapped_numbers)
+
+mapped_numbers2 = list(map(lambda x: x*2, [10, 15, 21, 33, 42, 55]))
+print(f'mapped_numbers2', mapped_numbers2)
 #
+base_numbers = [2, 4, 6, 8, 10]
+powers = [1, 2, 3, 4, 5]
+
+number_powers = list(map(pow, base_numbers, powers))
+print(f'number_powers', number_powers)
 #
-# # MAP permite processar e transformar todos os itens em um interaçao sem usar um loop explicito.
-# # É util quando quiser aplicar a cada item de uma interação uma funçao.
+# para de calcular assim que atinge o menor
+
+base_numbers = [2, 4, 6, 8, 10, 12]
+powers = [1, 2, 3, 4, 5]
+number_powers = list(map(pow, base_numbers, powers))
+print(f'number_powers', number_powers)
 #
-# numbers = [10, 15, 21, 33, 42, 55]
-# mapped_numbers = map(lambda x: x*2, numbers)
-# print(f'mapped_numbers', mapped_numbers)
-# #
-# numbers = [10, 15, 21, 33, 42, 55]
-# mapped_numbers = list(map(lambda x: x*2, numbers))
-# print(f'mapped_numbers', mapped_numbers)
-# #
-# mapped_numbers2 = list(map(lambda x: x*2, [10, 15, 21, 33, 42, 55]))
-# print(f'mapped_numbers2', mapped_numbers2)
-# #
-# base_numbers = [2, 4, 6, 8, 10]
-# powers = [1, 2, 3, 4, 5]
+words = ['Atirei', 'o', 'pau', 'no', 'gato']
+len_words = list(map(len, words))
+print(f'len_words', len_words)
+maiuscula = list(map(str.upper, words))
+print(f'maiuscula', maiuscula)
 #
-# number_powers = list(map(pow, base_numbers, powers))
-# print(f'number_powers', number_powers)
-# #
-# # # para de calcular assim que atinge o menor
-#
-# base_numbers = [2, 4, 6, 8, 10, 12]
-# powers = [1, 2, 3, 4, 5]
-# number_powers = list(map(pow, base_numbers, powers))
-# print(f'number_powers', number_powers)
-# #
-# words = ['Atirei', 'o', 'pau', 'no', 'gato']
-# len_words = list(map(len, words))
-# print(f'len_words', len_words)
-# maiuscula = list(map(str.upper, words))
-# print(f'maiuscula', maiuscula)
-# #
 # #
 def my_func(a, b):
     return a + b

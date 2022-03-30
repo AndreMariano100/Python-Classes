@@ -74,12 +74,12 @@ Working with sub folders (best practice):
 import os
 
 # # Getting full current path
-# current_path = os.getcwd()
-# print('Current Path:', current_path)
+current_path = os.getcwd()
+print('Current Path:', current_path)
 #
 # # Adding the directory and the file name to the path
-# full_file_path = os.path.join(current_path, 'Files', 'my_text_file.txt')
-# print('Full Path:', full_file_path)
+full_file_path = os.path.join(current_path, 'Files', 'my_text_file.txt')
+print('Full Path:', full_file_path)
 
 # Open the file - Create the file handler
 # 'r' = read only   / 'r+' = read and write
@@ -87,11 +87,11 @@ import os
 # 'a' = append      / 'a+' = append and read
 
 # Reading values from file ---------------------------------------------------------------------------------------------
-# file_object = open(full_file_path, 'r')
+file_object = open(full_file_path, 'r')
 # print()
-# print('File Handler:', file_object)
+print('File Handler:', file_object)
 #
-# # File handler methods
+# # # File handler methods
 # print(f'\tIs the file closed? {file_object.closed}')
 # print(f'\tWhat is the "mode" for the file handler? {file_object.mode}')
 # print(f'\tWhat is the full name of the file handler? {file_object.name}')
@@ -116,7 +116,7 @@ Reading the data from the file: There are three ways to read data from a text fi
 # data = file_object.read()
 # print('Using read():')
 # print(data)
-#
+# #
 # print('\nUsing readline():')
 # file_object.seek(0)
 # data_2_1 = file_object.readline()
@@ -128,20 +128,20 @@ Reading the data from the file: There are three ways to read data from a text fi
 # data_2_4 = file_object.readline()
 # print(data_2_4)
 # data_2_5 = file_object.readline()
-# print(data_2_5)
+# print(f'data 2.5: {data_2_5}')
 #
 # print('Using readlines():')
 # file_object.seek(0)
 # data_3 = file_object.readlines()
 # print(data_3)
 #
-# # With a FOR loop you don't use the readline() method.
+# With a FOR loop you don't use the readline() method.
 # print('\nUsing FOR loop:')
 # file_object.seek(0)
 # for data in file_object:
 #     print(data)
 #
-# # Closing the file
+# # # Closing the file
 # file_object.close()
 
 # Reading numeric data -------------------------------------------------------------------------------------------------
@@ -151,31 +151,31 @@ Reading the data from the file: There are three ways to read data from a text fi
 # print(data)
 # print(data[0])
 # a, b = data[0].split(', ')
-# print('A:', a, 'B:', b)
+# print('A:', a, 'B:', b.replace('\n', ''))
 # print(a+b)
 # file_object.close()
 
 # Writing values to file -----------------------------------------------------------------------------------------------
-# new_file_path = r'Files/my_text_file_2.txt'
-#
-# my_title = 'Flange Data\n'
-# my_data = {'Flange Pressure': 150,
-#            'Flange Diameter': 10,
-#            'Flange Schedule': 'STD'}
-# additional_data = ['flange face: raised face\n', 'flange type: welding neck\n', 'gasket type: spiral wound\n']
-#
-# file_object = open(new_file_path, 'w')
-#
-# # Write a string
-# file_object.write(my_title)
-#
-# # Write many strings
-# for k, v in my_data.items():
-#     file_object.write(f'{k}: {v} \n')
-#
-# # Write a list of strings
-# file_object.writelines(additional_data)
-# file_object.close()
+new_file_path = r'Files/my_text_file_2.txt'
+
+my_title = 'Flange Data\n'
+my_data = {'Flange Pressure': 150,
+           'Flange Diameter': 10,
+           'Flange Schedule': 'STD'}
+additional_data = ['flange face: raised face\n', 'flange type: welding neck\n', 'gasket type: spiral wound\n']
+
+file_object = open(new_file_path, 'w')
+
+# Write a string
+file_object.write(my_title)
+
+# Write many strings
+for k, v in my_data.items():
+    file_object.write(f'{k}: {v} \n')
+
+# Write a list of strings
+file_object.writelines(additional_data)
+file_object.close()
 
 # Closing files --------------------------------------------------------------------------------------------------------
 
@@ -191,19 +191,19 @@ Reading the data from the file: There are three ways to read data from a text fi
 #     Else: If there is no exception then this block will be executed
 #     Finally: Finally block always gets executed either exception is generated or not
 file_path = r'Files/my_data_file.txt'
-try:
-    print('reading file')
-    file_object = open(file_path, 'r')
-except IOError:
-    print('File not read / not found')
-else:
-    # perform more relevant operation
-    print('more relevant operations')
-    print('closing the file object')
-    file_object.close()
-finally:
-    print('the code continues on all cases')
-
+# try:
+#     print('reading file')
+#     file_object = open(file_path, 'r')
+# except IOError:
+#     print('File not read / not found')
+# else:
+#     # perform more relevant operation
+#     print('more relevant operations')
+#     print('closing the file object')
+#     file_object.close()
+# finally:
+#     print('the code continues on all cases')
+#
 # Alternative Method 2
 with open(file_path, 'r') as file_object:
     for lines in file_object:
