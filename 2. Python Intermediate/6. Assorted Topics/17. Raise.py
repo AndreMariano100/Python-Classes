@@ -1,8 +1,8 @@
 # -----------------------------------------------------
-# x = -1
-#
-# if x < 0:
-#     raise Exception('Negative numbers not allowed')
+x = -1
+
+if x < 0:
+    raise Exception('Negative numbers not allowed')
 
 # -----------------------------------------------------
 # name = 0
@@ -38,7 +38,7 @@
 #             return 'MyCustomError has been raised'
 #
 #
-# # raise MyCustomError
+# raise MyCustomError
 # raise MyCustomError('We have a problem')
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ def check_divide(x):
     assert int(x) != 0, 'Cannot divide by Zero'
 
 
-number = 0
+number = 3
 
 try:
     check_if_odd(number)

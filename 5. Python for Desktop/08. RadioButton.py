@@ -16,12 +16,9 @@ WIDGET METHODS:
     w.select()
 
 """
-###################
-# App Imports
 import tkinter as tk
 
 
-###################
 # App Functions
 def show_option_1():
     option_1 = v_1.get()
@@ -44,6 +41,7 @@ def function_4():
 def show_option_2():
     option = v_5.get()
     print('Button Selected:', option)
+
 
 
 ###################
@@ -134,23 +132,52 @@ radiobuttons_labels = [('Option 1', 'A'),
                        ('Option 15', 'O'),
                        ]
 num_col = 3
-for i in range(len(radiobuttons_labels)):
-    radio = tk.Radiobutton(frame_5, text=radiobuttons_labels[i][0], variable=v_5,
-                           value=radiobuttons_labels[i][1], command=show_option_2,
+for i, (text, value) in enumerate(radiobuttons_labels):
+    radio = tk.Radiobutton(frame_5, text=text, variable=v_5,
+                           value=value, command=show_option_2,
                            indicatoron=0)
     radio.grid(row=i//num_col, column=i % num_col)
 
+v_5.set('Z')
 
 # Frame for the sixth set of radiobuttons - organizing by lines
+v_6 = tk.StringVar()
 frame_6 = tk.Frame(root, relief='ridge', bd=2)
 frame_6.grid(row=0, column=5)
 num_lines = 5
 for i in range(len(radiobuttons_labels)):
-    radio = tk.Radiobutton(frame_6, text=radiobuttons_labels[i][0], variable=v_5,
+    radio = tk.Radiobutton(frame_6, text=radiobuttons_labels[i][0], variable=v_6,
                            value=radiobuttons_labels[i][1], command=show_option_2)
     radio.grid(row=i % num_lines, column=i//num_lines)
 
-v_5.set('A')
+v_6.set('A')
+
+# Frame for the seventh set of radiobuttons - ttkbootstrap style
+if True:
+    import tkinter.ttk as ttk
+    from ttkbootstrap import Style
+
+    def show_option_7():
+        print(f'Selected: {v_7.get()}')
+
+    style = Style(theme='flatly')
+
+    frame_7 = ttk.Frame(root, relief='ridge')
+    frame_7.grid(row=0, column=6)
+    labels = ('Radio Button 1', 'Radio Button 2', 'Radio Button 3')
+    v_7 = tk.IntVar()
+    for i, text in enumerate(labels):
+        ttk.Radiobutton(frame_7, text=text, variable=v_7, value=i, command=show_option_7)\
+            .grid(row=i, column=0, sticky='nsew', pady=5, padx=10)
+    v_7.set(0)
+
+    for i, text in enumerate(labels):
+        ttk.Radiobutton(frame_7, text=text, variable=v_7, value=i+3, command=show_option_7, style='primary.Toolbutton')\
+            .grid(row=i+3, column=0, sticky='nsew', pady=5, padx=10)
+
+    for i, text in enumerate(labels):
+        ttk.Radiobutton(frame_7, text=text, variable=v_7, value=i+6, command=show_option_7,
+                        style='primary.Outline.Toolbutton').grid(row=i+6, column=0, sticky='nsew', pady=5, padx=10)
 
 #####################
 # Run the App

@@ -6,8 +6,7 @@ which is similar to lambda expression.
 
 Exec Function.
 Execute Python code dynamically.
-That is to say exec can execute complex Python code,
-unlike the eval function which can only evaluate an expression.
+That is to say exec can execute complex Python code, unlike the eval function which can only evaluate an expression.
 '''
 
 a = eval('1 + 1')

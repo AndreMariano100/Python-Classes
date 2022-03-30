@@ -45,5 +45,5 @@ def linux_machine():
 
 try:
     linux_machine()
-except:
+except AssertionError:
     print('Machine is not Linux based')
